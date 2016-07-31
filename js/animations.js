@@ -1,15 +1,14 @@
 $(document).ready(function(){
 
-  $('#inputexample').hide();
+  $('.inputdiv').hide();
   $('.final').hide();
 
 
   $('#inputbutton').click(function(){
 
-      $('#inputexample').toggle("fast");
+      $('.inputdiv').toggle("fast");
 
 
   });
-
 
 });
