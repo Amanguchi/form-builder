@@ -30,46 +30,45 @@
 </head>
 <body>
 <p>
-  Please choose which item you would like to add:
+  You will be given 2 input fields, a large text area for a message and a personal submit button.<br />
+  Each field will be styled with the bootstrap CSS and default settings.
 </p>
-  <div class="btn-group">
-    <button type="button" class="btn btn-primary" id="inputbutton">Input Field</button>
-    <button type="button" class="btn btn-primary" onclick="addTextArea()">Text Area</button>
-    <button type="button" class="btn btn-primary" onclick="addRadio()">Radio Button</button>
-    <button type="button" class="btn btn-primary" onclick="addButton()">Submit Button</button>
-  </div>
-    <div class="form-horizontal" role="form">
-      <div class ="inputdiv">
-      <div class="form-group">
-        <label class="control-label col-sm-1" for="userplaceholder">Placeholder:</label>
-        <div class="col-sm-2">
-          <input type="text" class="form-control" id="userplaceholder">
+<hr />
+<div class="btn">
+  <button type="button" class="btn btn-default" id="startbutton" onclick="resetfields()">Let's Start! </button>
+</div>
+  <div class="row">
+      <div class="col-sm-4">
+        <div class="form-horizontal" role="form">
+          <div class ="inputdiv">
+              <h4>Your first Input Field</h4>
+              <div class="form-group">
+                <label class="control-label col-sm-1" for="userplaceholder">Placeholder:</label>
+              <input type="text" class="form-control" id="userplaceholder" placeholder="This is a placeholder!">
+            </div>
+        <div class="form-group">
+          <label class="control-label col-sm-1" for="usermaxlength">Max Length:</label>
+            <input type="text" class="form-control" id="usermaxlength">
         </div>
+      <div class="form-group">
+        <label class="control-label col-sm-1" for="size">Size:</label>
+          <input type="text" class="form-control" id="size">
+      </div>
+          <div class="form-group">
+          <label class="control-label col-sm-1" for="inputid">ID:</label>
+            <input type="text" class="form-control" id="inputid">
+          </div>
+        <input type="button" value="Submit" class="btn btn-default" onclick="getInput()" id="submit" />
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <!-- placeholder for second column -->
+    </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-1" for="usermaxlength">Max Length:</label>
-      <div class="col-sm-2">
-        <input type="text" class="form-control" id="usermaxlength">
-      </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-1" for="size">Size:</label>
-    <div class="col-sm-2">
-      <input type="text" class="form-control" id="size">
+      <textarea class="form-control" rows ="3" id="output"></textarea>
     </div>
-</div>
-<div class="form-group">
-  <label class="control-label col-sm-1" for="inputid">ID:</label>
-  <div class="col-sm-2">
-    <input type="text" class="form-control" id="inputid">
-  </div>
-</div>
-    <input type="button" value="Submit" class="btn btn-default" onclick="getInput()" />
-</div>
-<div class="form-group">
-  <textarea class="form-control" rows ="5" id="output"></textarea>
-</div>
-</div>
-</div>
-</body>
+    </div>
+  </body>
 </html>

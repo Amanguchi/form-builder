@@ -2,12 +2,17 @@ $(document).ready(function(){
 
   $('.inputdiv').hide();
   $('.final').hide();
+  $('#output').hide();
 
-
-  $('#inputbutton').click(function(){
+  $('#startbutton').click(function(){
 
       $('.inputdiv').toggle("fast");
 
+  });
+
+  $('#').click(function(){
+
+      $('.inputdiv').toggle("fast");
 
   });
 
