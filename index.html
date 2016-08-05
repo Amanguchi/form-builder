@@ -33,12 +33,12 @@
   You will be given 2 input fields, a large text area for a message and a personal submit button.<br />
   Each field will be styled with the bootstrap CSS and default settings.
 </p>
-<hr />
 <div class="btn">
-  <button type="button" class="btn btn-default" id="startbutton" onclick="resetfields()">Let's Start! </button>
+  <button type="button" class="btn btn-default" id="startbutton" onclick="resetfields()">Let's Get Started! </button>
 </div>
   <div class="row">
-      <div class="col-sm-4">
+    <!-- 1st Row 1st Column -->
+      <div class="col-sm-3">
         <div class="form-horizontal" role="form">
           <div class ="inputdiv">
               <h4>Your first Input Field</h4>
@@ -46,29 +46,96 @@
                 <label class="control-label col-sm-1" for="userplaceholder">Placeholder:</label>
               <input type="text" class="form-control" id="userplaceholder" placeholder="This is a placeholder!">
             </div>
-        <div class="form-group">
-          <label class="control-label col-sm-1" for="usermaxlength">Max Length:</label>
-            <input type="text" class="form-control" id="usermaxlength">
-        </div>
-      <div class="form-group">
-        <label class="control-label col-sm-1" for="size">Size:</label>
-          <input type="text" class="form-control" id="size">
-      </div>
           <div class="form-group">
           <label class="control-label col-sm-1" for="inputid">ID:</label>
             <input type="text" class="form-control" id="inputid">
           </div>
-        <input type="button" value="Submit" class="btn btn-default" onclick="getInput()" id="submit" />
         </div>
       </div>
     </div>
-    <div class="col-sm-4">
-      <!-- placeholder for second column -->
+      <!-- colm space -->
+      <div class="col-sm-1"></div>
+      <!-- 1st Row 2nd Column -->
+      <div class="col-sm-3">
+        <div class="form-horizontal" role="form">
+          <div class ="inputdiv">
+              <h4>Your second Input Field</h4>
+              <div class="form-group">
+                <label class="control-label col-sm-1" for="userplaceholder">Placeholder:</label>
+              <input type="text" class="form-control" id="userplaceholder2" placeholder="Placeholder number 2!">
+            </div>
+          <div class="form-group">
+          <label class="control-label col-sm-1" for="inputid">ID:</label>
+            <input type="text" class="form-control" id="inputid2">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- this is where the code box will output -->
+    <div class="col-sm-3" style="background-color:yellow;height:300px;"></div>
+    </div>
+  <div class="row">
+<!-- Placeholder for spacing of row -->
+<div class="col-sm-12">
+</div>
+  </div>
+<!-- 2nd Row 1st Column -->
+  <div class="row">
+    <div class="col-sm-3">
+      <div class ="inputdiv">
+          <h4>Your Text Area</h4>
+          <div class="form-group">
+            <label class="control-label col-sm-1" for="userplaceholder">Rows:</label>
+          <input type="text" class="form-control" id="rows">
+        </div>
+      <div class="form-group">
+      <label class="control-label col-sm-1" for="inputid">Label:</label>
+        <input type="text" class="form-control" id="label">
+      </div>
     </div>
     </div>
-    <div class="form-group">
-      <textarea class="form-control" rows ="3" id="output"></textarea>
+    <!-- colm space -->
+    <div class="col-sm-1"></div>
+    <!-- 2nd Row 2nd Column -->
+    <div class="col-sm-3">
+      <div class ="inputdiv">
+          <h4>The Submit Button</h4>
+          <div class="form-group">
+            <label class="control-label col-sm-1" for="value">Name:</label>
+          <input type="text" class="form-control" id="value">
+        </div>
+          <div class="form-group">
+            <label for="buttonpick">Button Label</label>
+            <select class="form-control" id="buttonpick">
+              <option>Submit</option>
+              <option>Send</option>
+              <option>Done</option>
+            </select>
+          </div>
     </div>
     </div>
+  </div>
+  <div class="row">
+<!-- Placeholder for spacing of row -->
+<div class="col-sm-12">
+</div>
+  </div>
+<!-- 3rd row 1st column -->
+  <div class="row">
+<div class="col-sm-5">
+  <div class="btn">
+    <button type="button" class="btn btn-default btn-md" id="codebutton" onclick="code()">Get my Form Code!</button>
+  </div>
+</div>
+  </div>
   </body>
 </html>
+<!-- Notes -->
+<!--
+Text area code:
+
+<div class="form-group">
+  <textarea class="form-control" rows ="3" id="output"></textarea>
+</div>
+
+-->

@@ -4,17 +4,6 @@ body {
   background-color: #ffe6e6;
 }
 
-.btn {
-
-color: black;
-
-}
-
-hr {
-
-color: black;
-}
-
 p {
 
   color: #777777;
@@ -27,6 +16,12 @@ h4 {
 
 .inputdiv {
   color: #777777;
+
+}
+
+.btn {
+
+color: black;
 
 }
 

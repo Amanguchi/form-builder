@@ -2,32 +2,49 @@
 //
 // @Author John Cordero
 
+function code() {
+
+  var placeholder = document.getElementById('userplaceholder').value;
+  var inputid = document.getElementById('inputid').value;
+  var userplaceholder2 = document.getElementById('userplaceholder2').value;
+  var inputid2 = document.getElementById('inputid2').value;
+  var rows = document.getElementById('rows').value;
+  var label = document.getElementById('label').value;
+  var value = document.getElementById('value').value;
+
+  var input = document.getElementsByTagName('input');
+
+    for (var i =0; i < input.length; i++ ) {
+
+      //Check needs to be done here for fields.
+
+    }
+
+}
+
 
 function getInput() {
 
   $('textarea').show();
 
-  var placeholder = document.getElementById('userplaceholder').value;
-  var usermaxlengthvalue = document.getElementById('usermaxlength').value;
-  var sizevalue = document.getElementById('size').value;
-  var inputid = document.getElementById('inputid').value;
 
-var code = "<input type=\"text\" placeholder=\""+placeholder+ "\" maxlength=\""+usermaxlengthvalue+"\" size=\""+sizevalue+"\" id=\""+inputid+"\" />";
+  var code = "<input type=\"text\" placeholder=\""+placeholder+ "\" id=\""+inputid+"\" />";
 
 
-document.getElementById('output').value= code;
+    document.getElementById('output').value= code;
 
 }
 
 function resetfields() {
 
-$('textarea').hide();
-document.getElementById('userplaceholder').value = "";
-document.getElementById('usermaxlength').value  = "";
-document.getElementById('size').value  = "";
-document.getElementById('inputid').value  = "";
-document.getElementById('output').value = "";
+  $('textarea').hide();
 
-
+  document.getElementById('userplaceholder').value = "";
+  document.getElementById('inputid').value  = "";
+  document.getElementById('userplaceholder2').value  = "";
+  document.getElementById('inputid2').value  = "";
+  document.getElementById('rows').value = "";
+  document.getElementById('label').value = "";
+  document.getElementById('value').value = "";
 
 }
