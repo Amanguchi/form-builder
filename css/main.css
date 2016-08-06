@@ -19,6 +19,7 @@ h4 {
 
 }
 
+
 .btn {
 
 color: black;
@@ -29,4 +30,10 @@ color: black;
 
 width: 50%;
 
+}
+
+#errormessages {
+
+  color: red;
+  font-weight: bold;
 }

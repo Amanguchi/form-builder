@@ -7,8 +7,9 @@ $(document).ready(function(){
 
   $('#startbutton').click(function(){
 
-      $('.inputdiv').toggle("fast");
-      $('#codebutton').show();
+      $('.inputdiv').slideToggle("fast");
+      $('#codebutton').slideToggle("fast");
+
 
   });
 

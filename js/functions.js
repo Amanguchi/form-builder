@@ -3,6 +3,7 @@
 // @Author John Cordero
 
 function code() {
+  $('#output').show();
 
   var placeholder = document.getElementById('userplaceholder').value;
   var inputid = document.getElementById('inputid').value;
@@ -16,7 +17,12 @@ function code() {
 
     for (var i =0; i < input.length; i++ ) {
 
-      //Check needs to be done here for fields.
+      if(input[i].value == '') {
+
+          input[i].style.borderColor = "red";
+          errormessages(1);
+
+      }
 
     }
 
@@ -25,13 +31,36 @@ function code() {
 
 function getInput() {
 
-  $('textarea').show();
+
 
 
   var code = "<input type=\"text\" placeholder=\""+placeholder+ "\" id=\""+inputid+"\" />";
 
 
     document.getElementById('output').value= code;
+
+}
+
+function errormessages(num) {
+
+  switch (num) {
+    case 0:
+            console.log("Test Error!");
+            break;
+
+    case 1:
+
+          document.getElementById('errormessages').innerHTML =
+          "Make sure ALL fields have contents.";
+
+    default:
+
+            console.log("There was an error within the web application!!!");
+
+  }
+
+
+
 
 }
 
@@ -46,5 +75,9 @@ function resetfields() {
   document.getElementById('rows').value = "";
   document.getElementById('label').value = "";
   document.getElementById('value').value = "";
+
+  document.getElementById('errormessages').innerHTML = "";
+  //fix below
+  document.getElementsByTagName('input').style.borderColor = "#cccccc";
 
 }
