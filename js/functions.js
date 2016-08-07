@@ -2,8 +2,9 @@
 //
 // @Author John Cordero
 
+
+
 function code() {
-  $('#output').show();
 
   var placeholder = document.getElementById('userplaceholder').value;
   var inputid = document.getElementById('inputid').value;
@@ -21,10 +22,25 @@ function code() {
 
           input[i].style.borderColor = "red";
           errormessages(1);
+            if (input[i].length = input[i].length - 1) {
 
-      }
+              System.exit(0);
+            }
+
+        } else {
+
+          $('#output').show("slow");
+          var code = "<input type=\"text\" placeholder=\""+placeholder+ "\" id=\""+inputid+"\"/>";
+
+
+            document.getElementById('output').value= code;
+
+        }
+
 
     }
+
+
 
 }
 
@@ -34,7 +50,7 @@ function getInput() {
 
 
 
-  var code = "<input type=\"text\" placeholder=\""+placeholder+ "\" id=\""+inputid+"\" />";
+  var code = "<input type=\"text\" placeholder=\""+placeholder+ "\" id=\""+inputid+"\"/>";
 
 
     document.getElementById('output').value= code;
@@ -52,6 +68,7 @@ function errormessages(num) {
 
           document.getElementById('errormessages').innerHTML =
           "Make sure ALL fields have contents.";
+          console.log("The user did not enter every field.");
 
     default:
 
@@ -60,9 +77,8 @@ function errormessages(num) {
   }
 
 
-
-
 }
+
 
 function resetfields() {
 
@@ -77,7 +93,12 @@ function resetfields() {
   document.getElementById('value').value = "";
 
   document.getElementById('errormessages').innerHTML = "";
-  //fix below
-  document.getElementsByTagName('input').style.borderColor = "#cccccc";
+
+  var input = document.getElementsByTagName('input');
+  for (var i =0; i < input.length; i++ ) {
+
+      input[i].style.borderColor = "#cccccc";
+
+  }
 
 }
