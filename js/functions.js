@@ -16,46 +16,36 @@ function code() {
 
   var input = document.getElementsByTagName('input');
 
-    for (var i =0; i < input.length; i++ ) {
+    for (var i =0; i < input.length; i++) {
+        //If Fields are empty
+        if(input[i].value == '') {
 
-      if(input[i].value == '') {
+            input[i].style.borderColor = "red";
+            errormessages(1);
 
-          input[i].style.borderColor = "red";
-          errormessages(1);
-            if (input[i].length = input[i].length - 1) {
+          }
+        //If fields contain a value
+        if (input[i].value) {
 
-              System.exit(0);
-            }
+          input[i].style.borderColor = "#cccccc";
 
-        } else {
-
-          $('#output').show("slow");
-          var code = "<input type=\"text\" placeholder=\""+placeholder+ "\" id=\""+inputid+"\"/>";
-
-
-            document.getElementById('output').value= code;
-
-        }
-
+          }
 
     }
+    // If rows column contains a letter or @$()[}{!}]\]`
+    if (isNaN(input[4].value)){
 
+        input[4].style.borderColor = "red";
+        errormessages(2);
+    }
+    //If ids are too long
+     if (input[1].value.length > 15 || input[3].value.length > 15) {
 
-
-}
-
-
-function getInput() {
-
-
-
-
-  var code = "<input type=\"text\" placeholder=\""+placeholder+ "\" id=\""+inputid+"\"/>";
-
-
-    document.getElementById('output').value= code;
+      alert("It is recommended that id names remain short and sweet! ...Proceeding.");
+    }
 
 }
+
 
 function errormessages(num) {
 
@@ -69,6 +59,14 @@ function errormessages(num) {
           document.getElementById('errormessages').innerHTML =
           "Make sure ALL fields have contents.";
           console.log("The user did not enter every field.");
+          break;
+
+    case 2:
+
+          document.getElementById('errormessages').innerHTML =
+          "ROWS needs to be a number!";
+          console.log("The user entered a false input for the row input field.");
+          break;
 
     default:
 
@@ -95,10 +93,17 @@ function resetfields() {
   document.getElementById('errormessages').innerHTML = "";
 
   var input = document.getElementsByTagName('input');
-  for (var i =0; i < input.length; i++ ) {
+  for (var i =0; i < input.length; i++) {
 
       input[i].style.borderColor = "#cccccc";
 
   }
 
 }
+/*
+$('#output').show("slow");
+var code = "<input type=\"text\" placeholder=\""+placeholder+ "\" id=\""+inputid+"\"/>";
+
+
+  document.getElementById('output').value= code;
+  */
