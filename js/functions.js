@@ -2,13 +2,13 @@
 //
 // @Author John Cordero
 
-
-
 function code() {
+
+  var check = 0;
 
   var placeholder = document.getElementById('userplaceholder').value;
   var inputid = document.getElementById('inputid').value;
-  var userplaceholder2 = document.getElementById('userplaceholder2').value;
+  var placeholder2 = document.getElementById('userplaceholder2').value;
   var inputid2 = document.getElementById('inputid2').value;
   var rows = document.getElementById('rows').value;
   var label = document.getElementById('label').value;
@@ -22,6 +22,7 @@ function code() {
 
             input[i].style.borderColor = "red";
             errormessages(1);
+            check = 1;
 
           }
         //If fields contain a value
@@ -32,16 +33,36 @@ function code() {
           }
 
     }
-    // If rows column contains a letter or @$()[}{!}]\]`
+    // If rows column contains a letter or @#$
     if (isNaN(input[4].value)){
 
         input[4].style.borderColor = "red";
         errormessages(2);
+        check = 1;
     }
+    //If row number is longer than 100
+    if (input[4].value >= 100) {
+
+      alert("It is not recommended that rows are larger than 100! ...Proceeding");
+    }
+
     //If ids are too long
      if (input[1].value.length > 15 || input[3].value.length > 15) {
 
       alert("It is recommended that id names remain short and sweet! ...Proceeding.");
+    }
+
+    else if (check == 0) {
+
+      $('#output').show("slow");
+      var code = "<input class=\"form-control\" type=\"text\" placeholder=\""+placeholder+ "\" id=\""+inputid+"\"/>" +"<br>"
+                  +"<input class=\"form-control\"  placeholder=\""+placeholder2+ "\" id=\""+inputid2+"\"/>"+"<br>"
+                  //<textarea rows="" id=""> <textarea>
+                  +"<textarea rows=\""+rows+"\" label=\""+label+"\">"+"<textarea>";
+
+        document.getElementById('output').value= code;
+
+
     }
 
 }
@@ -77,7 +98,6 @@ function errormessages(num) {
 
 }
 
-
 function resetfields() {
 
   $('textarea').hide();
@@ -100,10 +120,3 @@ function resetfields() {
   }
 
 }
-/*
-$('#output').show("slow");
-var code = "<input type=\"text\" placeholder=\""+placeholder+ "\" id=\""+inputid+"\"/>";
-
-
-  document.getElementById('output').value= code;
-  */
