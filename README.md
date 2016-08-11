@@ -7,3 +7,7 @@ simple form in less than 30 seconds!
 <a href="http://tinypic.com?ref=euoy07" target="_blank"><img src="http://i63.tinypic.com/euoy07.jpg" border="0"></a>
 <br>
 You can see a basic live demo <a href="https://amanguchi.github.io/form-builder/" rel="nofollow">  <b>here </b></a>
+<hr>
+<h3>Author</h3>
+www.twitter.com/johncorderox
+
