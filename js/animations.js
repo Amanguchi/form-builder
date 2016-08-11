@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
   $('.inputdiv').hide();
-  $('.final').hide();
   $('#output').hide();
+  $('#output2').hide();
   $('#codebutton').hide();
   $('#resetbutton').hide();
 

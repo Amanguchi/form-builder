@@ -55,6 +55,7 @@ function code() {
     else if (check == 0) {
 
       $('#output').show("slow");
+      $('#output2').show("slow");
 
       var code =
 
@@ -67,7 +68,7 @@ function code() {
                   +"</div>"
                   +"<div class=\"form-group\">"
                   +"<textarea class=\"form-control\"rows=\""+rows+"\" id=\""+inputid3+"\">"+"</textarea>"+"<br>"
-                  +"<button type=\"submit\" class=\"btn btn-default\">"+buttonname+\"</button>"
+                  +"<button type=\"submit\" class=\"btn btn-default\">"+buttonname+"\"</button>"
                   +"</div>"
                   +"</form>"
 
@@ -111,6 +112,7 @@ function errormessages(num) {
 function resetfields() {
 
   $('textarea').hide();
+  $('#output2').hide();
 
   document.getElementById('userplaceholder').value = "";
   document.getElementById('inputid').value  = "";
@@ -118,7 +120,7 @@ function resetfields() {
   document.getElementById('inputid2').value  = "";
   document.getElementById('rows').value = "";
   document.getElementById('inputid3').value = "";
-  document.getElementById('value').value = "";
+
 
   document.getElementById('errormessages').innerHTML = "";
 
