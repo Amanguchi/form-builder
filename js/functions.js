@@ -11,8 +11,8 @@ function code() {
   var placeholder2 = document.getElementById('userplaceholder2').value;
   var inputid2 = document.getElementById('inputid2').value;
   var rows = document.getElementById('rows').value;
-  var label = document.getElementById('label').value;
-  var value = document.getElementById('value').value;
+  var inputid3 = document.getElementById('inputid3').value;
+  var buttonname = document.getElementById('buttonpick').value;
 
   var input = document.getElementsByTagName('input');
 
@@ -47,7 +47,7 @@ function code() {
     }
 
     //If ids are too long
-     if (input[1].value.length > 15 || input[3].value.length > 15) {
+     if (input[1].value.length > 15 || input[3].value.length > 15 || input[5].value.length > 15) {
 
       alert("It is recommended that id names remain short and sweet! ...Proceeding.");
     }
@@ -55,13 +55,23 @@ function code() {
     else if (check == 0) {
 
       $('#output').show("slow");
-      var code = "<input class=\"form-control\" type=\"text\" placeholder=\""+placeholder+ "\" id=\""+inputid+"\"/>" +"<br>"
-                  +"<input class=\"form-control\"  placeholder=\""+placeholder2+ "\" id=\""+inputid2+"\"/>"+"<br>"
-                  //<textarea rows="" id=""> <textarea>
-                  +"<textarea rows=\""+rows+"\" label=\""+label+"\">"+"<textarea>";
+
+      var code =
+
+                  "<form role=\"form\">"
+                  +"<div class=\"form-group\">"
+                  +"<input class=\"form-control\" type=\"text\" placeholder=\""+placeholder+ "\" id=\""+inputid+"\"/>"
+                  +"</div>"
+                  +"<div class=\"form-group\">"
+                  +"<input class=\"form-control\"  placeholder=\""+placeholder2+ "\" id=\""+inputid2+"\"/>"
+                  +"</div>"
+                  +"<div class=\"form-group\">"
+                  +"<textarea class=\"form-control\"rows=\""+rows+"\" id=\""+inputid3+"\">"+"</textarea>"+"<br>"
+                  +"<button type=\"submit\" class=\"btn btn-default\">"+buttonname+\"</button>"
+                  +"</div>"
+                  +"</form>"
 
         document.getElementById('output').value= code;
-
 
     }
 
@@ -107,7 +117,7 @@ function resetfields() {
   document.getElementById('userplaceholder2').value  = "";
   document.getElementById('inputid2').value  = "";
   document.getElementById('rows').value = "";
-  document.getElementById('label').value = "";
+  document.getElementById('inputid3').value = "";
   document.getElementById('value').value = "";
 
   document.getElementById('errormessages').innerHTML = "";
