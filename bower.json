@@ -1,0 +1,20 @@
+{
+  "name": "form-builder",
+  "homepage": "https://github.com/Amanguchi/form-builder",
+  "authors": [
+    "johncorderox@gmail.com"
+  ],
+  "description": "a form builder written in bootstrap and javascript",
+  "main": "index.html, functions.js",
+  "keywords": [
+    "form"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

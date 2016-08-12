@@ -5,12 +5,14 @@ $(document).ready(function(){
   $('#output2').hide();
   $('#codebutton').hide();
   $('#resetbutton').hide();
+  $('#fillbutton').hide();
 
   $('#startbutton').click(function(){
 
       $('.inputdiv').slideToggle("fast");
       $('#codebutton').slideToggle("fast");
       $('#resetbutton').slideToggle("fast");
+      $('#fillbutton').slideToggle("fast");
 
   });
 

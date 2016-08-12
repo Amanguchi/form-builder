@@ -78,6 +78,21 @@ function code() {
 
 }
 
+function fillfields() {
+
+  document.getElementById('userplaceholder').value = "Your Name*";
+  document.getElementById('inputid').value = "name";
+  document.getElementById('userplaceholder2').value = "Your E-Mail*";
+  document.getElementById('inputid2').value = "email";
+  document.getElementById('rows').value = "5";
+  document.getElementById('inputid3').value = "message";
+
+
+
+
+
+
+}
 
 function errormessages(num) {
 
