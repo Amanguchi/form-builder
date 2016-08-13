@@ -1,0 +1,31 @@
+{
+  "name": "form-builder",
+  "homepage": "https://github.com/Amanguchi/form-builder",
+  "authors": [
+    "Amanguchi <johncorderox@gmail.com>"
+  ],
+  "description": "a simple form builder written in bootstrap",
+  "main": "index.html",
+  "keywords": [
+    "bootstrap",
+    "form",
+    "builder",
+    "easy",
+    "fast",
+    "html",
+    "css",
+    "input"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "bootstrap": "^3.3.7"
+  }
+}
