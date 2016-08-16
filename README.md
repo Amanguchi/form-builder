@@ -3,8 +3,7 @@
 <br>
 It takes too long to add all the necessary tags to make a form work well with Bootstrap, so this site was created to make a
 simple form in less than 30 seconds!
-
-<a href="http://tinypic.com?ref=euoy07" target="_blank"><img src="http://i63.tinypic.com/euoy07.jpg" border="0"></a>
+<a href="http://tinypic.com?ref=10xt5pl" target="_blank"><img src="http://i65.tinypic.com/10xt5pl.jpg" border="0"></a><br>
 <br>
 You can see a basic live demo <a href="https://amanguchi.github.io/form-builder/" rel="nofollow">  <b>here </b></a>
 <hr>
