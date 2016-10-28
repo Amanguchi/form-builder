@@ -54,8 +54,8 @@ function code() {
 
     else if (check == 0) {
 
-      $('#output').show("slow");
-      $('#output2').show("slow");
+      $('#output, #output2').show("slow");
+      document.getElementById('errormessages').innerHTML = "";
 
       var code =
 
@@ -73,6 +73,7 @@ function code() {
                   +"</form>"
 
         document.getElementById('output').value= code;
+
 
     }
 
