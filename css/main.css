@@ -27,6 +27,16 @@ color: black;
 
 }
 
+.navbar-header {
+
+  height: 60px;
+}
+
+.btn-default {
+
+width: 150px;
+}
+
 #output {
 
 width: 50%;
@@ -37,4 +47,9 @@ width: 50%;
 
   color: red;
   font-weight: bold;
+}
+
+#info {
+
+  margin-left: 15px;
 }

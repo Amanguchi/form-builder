@@ -15,17 +15,18 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="index.html">Form Builder</a>
     </div>
-    <ul class="nav navbar-nav">
-      <li><a href="/tabs/about.html">About</a></li>
-      <li><a href="/tabs/contact.html">Contact</a></li>
-    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li><a href="tabs/about.html"><span class="glyphicon glyphicon-floppy-disk"></span> About form-builder</a></li>
+</ul>
   </div>
 </nav>
 </head>
 <body>
-<p>
+<p id="info">
   You will be given 2 input fields, a large text area for a message and a personal submit button.<br />
-  Each field will be styled with the bootstrap CSS and default settings.
+  Each field will be styled with the bootstrap CSS and default settings.<br /><br />
+
+  Check the <b>about form builder</b> if you need any help.
 </p>
 <div class="btn">
   <button type="button" class="btn btn-default" id="startbutton" onclick="resetfields()">Let's Get Started! </button>
@@ -122,6 +123,7 @@
     <button type="button" class="btn btn-default btn-md" id="codebutton" onclick="code()">Get my Form Code</button>
     <button type="button" class="btn btn-default btn-md" id="resetbutton" onclick="resetfields()">Reset All Fields</button>
     <button type="button" class="btn btn-default btn-md" id="fillbutton" onclick="fillfields()">Fill In Fields</button>
+    <button type="button" class="btn btn-default btn-md" id="closebutton" onclick="resetfields()">Close</button>
   </div>
 </div>
   </div>

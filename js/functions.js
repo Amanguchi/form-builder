@@ -136,6 +136,8 @@ function resetfields() {
   document.getElementById('inputid2').value  = "";
   document.getElementById('rows').value = "";
   document.getElementById('inputid3').value = "";
+  //resets select to default of [0]
+  document.getElementById('buttonpick').selectedIndex = 0;
 
 
   document.getElementById('errormessages').innerHTML = "";
